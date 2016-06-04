@@ -1,0 +1,518 @@
+/*
+Theme Name: WP Bootstrap
+Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
+Description: A demo theme built to accompany the Treehouse blog post <a href="http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial">How to Build a WordPress Theme with Bootstrap</a>.
+Author: Zac Gordon
+Author URI: http://teamtreehouse.com/
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+
+@import url('bootstrap/css/bootstrap.css'); 
+@import url('bootstrap/css/bootstrap-responsive.css');
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700,800);
+@import url(https://fonts.googleapis.com/css?family=Asap:400,700);
+
+#div-carros,
+#div-testes{
+	display: none;
+}
+
+/* Images */
+.entry-content img,
+.comment-content img,
+.widget img {
+max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"] {
+height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full {
+max-width: 100%;
+width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+
+@media (max-width: 767px){
+
+	body {
+		padding: 0;
+	}
+}
+
+@media(max-width: 991px){
+
+	.main-page{
+
+		width: 100%;
+		margin: auto;
+	}
+
+	header.header-small{
+
+		background-color: #ed1c24;
+		height: 56px;
+		display: block;
+		position: relative;
+	}
+
+	header .logo{
+		height: 100%;
+		background-image: url(images/logo-small.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		display: block;
+		float: left;
+	}
+
+	header .logo a{
+		position: absolute;
+		width: 100%;
+		height: 100%;		
+	}
+
+	header .buttons-small{
+		height: 100%;
+		display: block;
+		position: relative;
+		text-align: center;
+		line-height: 56px;
+		
+	}
+
+	header .buttons-small img{
+
+		margin-top: 20px;
+
+
+	}
+
+	.hidden-menu{
+
+		background-color: #d41f1f;
+		display: none;
+		position: absolute;
+		width: 100%;
+		z-index: 9999;
+
+	}
+
+	.hidden-menu ul{
+		
+		display: block;
+		position: relative;
+		padding: 0;
+
+
+	}
+
+	.hidden-menu ul li{
+
+		border-bottom: 1px #c21c1c solid;
+		height: 47px;
+		padding: 0 20px;
+		line-height: 47px;
+		display: block;
+		position: relative;
+
+	}
+	
+	.hidden-menu ul li a{
+		width: calc(100% - 20px);
+		font-family: 'Dosis', sans-serif;
+		font-weight: 700;
+		list-style: none;
+		text-transform: uppercase;
+		color: white;
+		display: block;
+		position: relative;
+	}
+	.hidden-menu ul li a:after{
+		
+		content: url(images/down.png);
+		width: 10px;
+		height: 10px;
+		float: right;
+		margin-top: 20px;
+	}
+
+	.main-content .mosaico .no-padding{
+		padding: 0;
+	}
+
+}
+
+@media(min-width: 992px){
+
+	
+
+	header.header-large{
+		background-color: #ed1c24;
+		height: 80px;
+		width: 100%;
+		display: block;
+		vertical-align: middle
+	}
+
+	header .logo{
+		background-image: url(images/logo.png);
+		width: 223px;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		display: block;
+		float: left;
+	}
+
+	header .logo a{
+		position: absolute;
+		width: 100%;
+		height: 100%;		
+	}
+
+	header .menu{
+		
+		width: auto;
+		display: block;
+		position: relative;
+		margin-left: 20%;
+		height: 100%;
+
+	}
+
+	header .menu nav.main-nav{
+		display: inline-block;
+		position: relative;
+		float: left;
+	}
+
+	header .menu nav.main-nav ul{
+		margin: 0;
+		width: auto;
+		position: relative;
+		display: inline-block;
+	
+	}
+
+	header .menu nav.main-nav ul li{
+		height: 80px;
+		line-height: 80px;
+		display: inline-block;
+				
+	}
+
+	header .menu nav.main-nav ul li a{
+		font-family: 'Dosis', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 0;
+		font-size: 14px;
+		position: relative;
+		color: white;
+		width: auto;
+		padding: 0 2px;
+		display: inline-block;
+		
+	}
+
+	header .menu nav.main-nav ul li a:after{
+
+		content: url(images/down.png);
+		width: 10px;
+		height: 10px;
+	}
+
+	header .menu nav.main-nav ul li a:hover,
+	header .menu nav.main-nav ul li a:focus{
+
+		background-color: #242424;
+	}
+	header .menu .search-form {
+		width: auto;
+		display: inline-block;
+		margin: 0;
+		position: relative;
+		float: left;
+		height: 100%;
+	}
+
+	header .menu .search-form form {
+
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 80px;
+		margin: 0;
+		padding: 22px 0;
+
+
+	}
+
+	header .menu .search-form form input[type="text"]{
+
+		width: 130px;
+		height: 35px;
+		border-radius: 0;
+		text-transform: uppercase;
+		margin: 0;
+		position: relative;
+		padding-left: 10px;
+
+	}
+
+	header .menu .search-form form input[type="submit"]{
+		background-image: url(images/search.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: transparent;
+		border: none;
+		width: 16px;
+		height: 16px;
+		position: relative;
+		left: -30px;
+		top: 2px;
+	}
+	
+	#hidden-divs{
+		position: relative;
+		z-index: 9999;
+	}
+
+	.control:hover + .sub-menu{
+		display: block;
+	}
+
+	.sub-menu{
+		background-color: #242424;
+		width: 100%;
+		height: 160px;
+		border-bottom: 2px #ed1c24 solid;
+		padding: 10px;		
+		position: absolute;
+	}
+
+
+
+	.sub-menu button.todos-carros{
+
+		border: none;
+		border-bottom: 1px #303030 solid;
+		background-color: #474747;
+		color: white;
+		width: 181px;
+		height: 32px;
+		margin: 8px 5px;
+	}
+
+	.sub-menu ul.lista-carros{
+
+		list-style: none;
+		font-family: 'Asap', sans-serif;
+		color: white;
+		margin: 10px;
+
+	}
+
+	.sub-menu ul.lista-carros li.item-lista-carros{
+
+		margin: 10px;
+	}
+
+	#div-testes{
+		padding: 0;
+		height: 210px;
+	}
+
+	.sub-menu ul.lista-teste {
+
+		background-color: #474747;
+		height: 100%;
+		position: relative;
+		list-style: none;
+		padding: 23px 0;
+		text-align: right;
+
+	}
+
+	.sub-menu ul.lista-teste li.itens-lista-teste{
+
+		width: 100%;
+		color: white;
+		font-family: 'Asap', sans-serif;
+		font-weight: 700;
+		font-size: 15px;
+		height: 33px;
+		line-height: 33px;
+		padding-right: 22px;
+
+
+	}
+	.sub-menu ul.lista-teste li.itens-lista-teste:first-child{
+
+		background-color: #242424;
+	}
+	.sub-menu ul.lista-teste li.itens-lista-teste:first-child:after{
+
+		color: white;
+		content: url(images/right.png);
+		position: absolute;
+		margin-left: 10px;
+		margin-top: 12px;
+	}
+
+	.sub-menu div.teste-destaque{
+		height: 100%;
+		padding: 20px 0;
+		display: block;
+		position: relative;
+
+	}
+
+	.sub-menu div.teste-destaque h4.teste-destaque-title{
+		color: white;
+		font-family: 'Asap', sans-serif;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 20px;
+		position: relative;
+		width: 80%;
+
+	}
+
+	.sub-header{
+
+		background-color: #242424;
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 28px;
+		margin-bottom: 10px;
+	}
+
+	.sub-header ul{
+
+		list-style: none;
+		display: inline-block;
+		font-family: 'Dosis', sans-serif;
+		font-weight: 800;
+		color: white;
+		font-size: 12px;
+		line-height: 28px;
+		text-transform: uppercase;
+		width: 100%;
+		position: relative;
+		padding: 0;
+	}
+
+	.sub-header ul li{
+		display: inline-block;
+		position: relative;
+		padding: 0 10px;
+	}
+
+	.sub-header ul li:first-child{
+		font-size: 14px;
+		background-image: url(images/arrow.png);
+		background-position: left;
+		background-repeat: no-repeat;
+		width: 142px;
+	}
+
+	.main-content{
+
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 500px;
+	}
+
+	.main-content p{
+		margin: 0;
+		position: relative;
+		width: 100%ç
+
+	}
+
+	.main-content .mosaico{
+		width: 53.78787878787878%;
+		position: relative;
+		display: inline-block;
+		float: left;
+		height: 100%;
+	}
+
+	.main-content .mosaico .row{
+		padding: 0;
+		margin: 0;
+	}
+
+	.main-content .mosaico .no-padding{
+		padding: 0;
+		max-height: 250px;
+	}
+
+	.main-content .mosaico .no-padding img{
+		max-height: 250px;
+	}
+
+	.main-content .mosaico .container-fluid{
+		padding: 0;
+		display: inline;
+	}
+
+	.main-content .big-foto{
+		width: 46.21212121212121%;
+		position: relative;
+		display: inline-block;
+		float: left;
+	}
+}
+@media (min-width: 1024px){
+
+	header .menu{		
+		width: 75%;
+		margin-left: 25%;
+
+	}
+}
+
+@media(min-width: 1200px){
+
+	header .menu nav.main-nav ul li a{
+		padding: 0 5px;
+	}
+
+	header .menu .search-form form input[type="text"]{
+
+		width: 140px;
+	}
+
+	.sub-header ul li{
+		padding: 0 20px;
+	}
+}
+
+@media (min-width: 1320px){
+
+	.main-page{
+
+		width: 1320px;
+		margin: auto;
+	}
+
+	header .menu nav.main-nav ul li a{
+
+		padding: 0 10px;
+	}
+
+	header .menu .search-form {
+		width: auto;
+	}
+}
