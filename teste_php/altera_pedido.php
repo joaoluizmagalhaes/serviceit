@@ -43,7 +43,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Teste PHP -Altran</title>
+		<title>Teste PHP -Service IT</title>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 	</head>

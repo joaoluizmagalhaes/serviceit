@@ -37,6 +37,15 @@ img.size-full {
 max-width: 100%;
 width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
+.no-padding{
+	padding: 0;
+}
+.left-maregin{
+	margin-left: 20px;
+}
+body{
+	background-color: #e6e6e6;
+}
 
 @media (max-width: 767px){
 
@@ -51,6 +60,15 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 
 		width: 100%;
 		margin: auto;
+	}
+
+	.banner-publicidade{
+		text-align: center;
+		position: relative;
+		width: 100%;
+		height: 60px;
+		padding: 6px;
+		background-color: #e6e6e6;
 	}
 
 	header.header-small{
@@ -150,7 +168,21 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 
 @media(min-width: 992px){
 
-	
+	.banner-publicidade{
+		text-align: center;
+		height: 114px;
+		padding: 12px;
+		background-color: #e6e6e6;
+		
+	}
+
+	.fixed{
+		position: fixed;
+		z-index: 9999;
+		width: 100%;
+		transition: visibility 1s;
+
+	}
 
 	header.header-large{
 		background-color: #ed1c24;
@@ -158,6 +190,15 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 		width: 100%;
 		display: block;
 		vertical-align: middle
+	}
+
+	header.fixed{
+		position: fixed;
+		z-index: 9999;
+		width: 100%;
+		transition: visibility 1s;
+		top: 114px;
+
 	}
 
 	header .logo{
@@ -386,6 +427,10 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 
 	}
 
+	.sub-menu div.teste-destaque p.teste-destaque-text{
+		font-size: 15px;
+		color: #ed1c24;
+	}
 	.sub-header{
 
 		background-color: #242424;
@@ -430,13 +475,16 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 		position: relative;
 		display: block;
 		width: 100%;
-		height: 500px;
+		
+	}
+	.top-main{
+		top: 194px;
 	}
 
 	.main-content p{
 		margin: 0;
 		position: relative;
-		width: 100%ç
+		width: 100%;
 
 	}
 
@@ -445,7 +493,7 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 		position: relative;
 		display: inline-block;
 		float: left;
-		height: 100%;
+
 	}
 
 	.main-content .mosaico .row{
@@ -473,6 +521,16 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 		display: inline-block;
 		float: left;
 	}
+
+	.secondary-content{
+		width: 100%;
+		position: relative;
+		margin: 0;
+	}
+
+	.secondary-content .no-padding{
+		margin-top: 28px;
+	}
 }
 @media (min-width: 1024px){
 
@@ -497,6 +555,7 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 	.sub-header ul li{
 		padding: 0 20px;
 	}
+
 }
 
 @media (min-width: 1320px){
@@ -506,6 +565,9 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 		width: 1320px;
 		margin: auto;
 	}
+	.banner-publicidade{
+		width: 1320px;
+	}
 
 	header .menu nav.main-nav ul li a{
 
@@ -514,5 +576,10 @@ width: auto; /* Prevent stretching of full-size images with height and width att
 
 	header .menu .search-form {
 		width: auto;
+	}
+
+	header.fixed{
+		width: 1320px;
+
 	}
 }

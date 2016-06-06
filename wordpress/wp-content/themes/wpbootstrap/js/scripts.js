@@ -45,3 +45,24 @@ $(document).ready(function(){
 	});
 
 });
+
+$(window).scroll(function(){
+
+	var sticky = $('.sticky'),
+		scroll = $(window).scrollTop(),
+		main = $('.main-content'),
+		secondary = $('.secondary-content');
+
+	if (scroll >= 200){ 
+		sticky.addClass('fixed');
+		main.addClass('top-main');
+		secondary.addClass('top-main');
+	}
+
+	else {
+		sticky.removeClass('fixed');
+		main.removeClass('top-main');
+		secondary.removeClass('top-main');
+	}
+
+})

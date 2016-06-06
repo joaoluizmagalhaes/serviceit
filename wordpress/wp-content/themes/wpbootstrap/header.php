@@ -17,7 +17,11 @@
     </head>
     <body>
         <div class="main-page">
-            <header class="header-large hidden-xs hidden-sm">            
+	        <div class="banner-publicidade sticky">
+	        	<img class="hidden-xs hidden-sm" src="<?php bloginfo('template_url'); ?>/images/banner.jpg">
+	        	<img class="hidden-md hidden-lg" src="<?php bloginfo('template_url'); ?>/images/banner-mobile.jpg">
+	        </div>
+            <header class="header-large sticky hidden-xs hidden-sm">            
                 <div class="logo">
                     <a href="index.php" class="link-logo"></a>                
                 </div>
@@ -39,34 +43,8 @@
                             <input type="submit" id="searchsubmit" value="" />
                         </form>
                     </div>
-                </div>               
-            </header>
-            <header class=" header-small hidden-md hidden-lg">
-            	<div class="container-fluid">
-            		<div class="row">
-            			<div class="col-xs-3 col-sm-2 buttons-small">
-            				<img src="<?php bloginfo('template_url'); ?>/images/search-small.png" alt="">
-            			</div>
-            			<div class="col-xs-6 col-sm-8 logo">
-            				<a href="index.php" class="link-logo"></a>  
-            			</div>
-            			<div class="col-xs-3 col-sm-2 buttons-small">
-            				<a href="#" id="menu-small-open"><img id="menu-small-icon" src="<?php bloginfo('template_url'); ?>/images/menu-small.png" alt=""></a>
-            			</div>
-            		</div>
-            	</div>
-            </header>
-            <div class="hidden-menu hidden-md hidden-lg">
-            	<ul>
-            		<li><a href="#">Carros</a></li>
-            		<li><a href="#">Testes</a></li>
-            		<li><a href="#">Notícias</a></li>
-            		<li><a href="#">Auto-Serviço</a></li>
-            		<li><a href="#">Guia de Compras</a></li>
-            		<li><a href="#">Tabela Fipe</a></li>
-            	</ul>
-            </div>
-            <div id="hidden-divs">
+                </div> 
+                <div id="hidden-divs">
 	            <div class="sub-menu carros" id="div-carros">
 	                <div class="container-fluid">
 	                    <div class="row">
@@ -137,8 +115,8 @@
 	                           <h4 class="teste-destaque-title">Audi A6 2.0 TFSI</h4>
 	                        </div>
 	                        <div class="col-md-2 col-lg-2 teste-destaque">
-	                            <img src="<?php bloginfo('template_url'); ?>/images/fusion.jpg">
-	                           <h4 class="teste-destaque-title"></h4> 
+	                            <h4 class="teste-destaque-title">Ford EcoSport 1.6 Powershift</h4> 
+	                            <p class="teste-destaque-text">EcoSport ganha motor 1.6 atrelado à transmissão automatizada de 6...</p>
 	                        </div>
 	                        <div class="col-md-2 col-lg-2 teste-destaque">
 	                            <img src="<?php bloginfo('template_url'); ?>/images/q3.jpg">
@@ -151,7 +129,34 @@
 	                    </div>
 	                </div>
 	            </div>
-	        </div>
+	        </div>              
+            </header>
+            <header class=" header-small hidden-md hidden-lg">
+            	<div class="container-fluid">
+            		<div class="row">
+            			<div class="col-xs-3 col-sm-2 buttons-small">
+            				<img src="<?php bloginfo('template_url'); ?>/images/search-small.png" alt="">
+            			</div>
+            			<div class="col-xs-6 col-sm-8 logo">
+            				<a href="index.php" class="link-logo"></a>  
+            			</div>
+            			<div class="col-xs-3 col-sm-2 buttons-small">
+            				<a href="#" id="menu-small-open"><img id="menu-small-icon" src="<?php bloginfo('template_url'); ?>/images/menu-small.png" alt=""></a>
+            			</div>
+            		</div>
+            	</div>
+            </header>
+            <div class="hidden-menu hidden-md hidden-lg">
+            	<ul>
+            		<li><a href="#">Carros</a></li>
+            		<li><a href="#">Testes</a></li>
+            		<li><a href="#">Notícias</a></li>
+            		<li><a href="#">Auto-Serviço</a></li>
+            		<li><a href="#">Guia de Compras</a></li>
+            		<li><a href="#">Tabela Fipe</a></li>
+            	</ul>
+            </div>
+            
 	        <div id="menu-small" class="sub-header hidden-xs hidden-sm">
             	<ul >
             		<li>+Acessados</li>
